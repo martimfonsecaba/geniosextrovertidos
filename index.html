@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Génios Extrovertidos</title>
+    <link rel="icon" href="img/logo_genios_extorvertidos.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hamburger.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="nomepoliticas.css">
+</head>
+<body>
+   <header>
+    <div class="logo">
+        <img src="img/logo_genios_extorvertidos.png" alt="">
+        <span>GÉNIOS EXTROVERTIDOS</span>
+    </div>
+
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="nav-menu">
+        <a href="index.html">HOME</a>
+        <a href="equipa.html">EQUIPA</a>
+        <a href="about.html">SOBRE NÓS</a>
+        <a href="informacao.html">INFORMAÇÕES</a>
+        <a href="testemunhos.html">TESTEMUNHOS</a>
+        <a href="contatos.html">CONTACTOS</a>
+    </nav>
+</header>
+
+   <!-- DESTAQUE CARROSSEL -->
+    <section id="destaque">
+      <div class="carrossel">
+        <div class="carrossel-slide ativo">
+          <div class="container-destaque-not1">
+            <div class="not1-img">
+              <img src="img/img_carrosel/img_carrosel_1.png" alt=""/>
+            </div>
+            <div class="not1-info">
+              <h3>Explicações personalizadas para o teu sucesso .</h3>
+              <p>
+                 "Do ensino básico ao universitário, acompanhamos cada aluno com atenção individual e métodos adaptados." 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carrossel-slide">
+          <div class="container-destaque-not2">
+            <div class="not2-img">
+              <img src="img/img_carrosel/img_carrosel_2.png" alt="" />
+            </div>
+            <div class="not2-info">
+              <h3>Mais de 200 alunos aprovados</h3>
+              <p>
+                "A nossa experiência fala por si. Resultados reais, alunos mais confiantes e famílias satisfeitas ."
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carrossel-slide">
+          <div class="container-destaque-not3">
+            <div class="not3-img">
+              <img src="img/img_carrosel/img_carrosel_3.png" alt="" />
+            </div>
+            <div class="not3-info">
+              <h3>Supera as dificuldades com o apoio certo</h3>
+              <p>
+                "Quanto mais cedo começares, mais fácil fica. Marca já a tua primeira sessão e recupera a confiança nas matérias."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="setas-container">
+        <button class="setadestaque" onclick="anterior()">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button class="setadestaque" onclick="proximo()">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+    <!-- STATS -->
+    <section id="stats">
+      <div class="stats-container">
+        <div class="stat-card">
+          <span class="stat-numero" data-target="100">0</span><span class="stat-plus">+</span>
+          <p class="stat-label">Alunos acompanhados</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-numero" data-target="30">0</span><span class="stat-plus">+</span>
+          <p class="stat-label">Anos de experiência</p>
+        </div>
+        <div class="stat-numero-card">
+          <span class="stat-numero" data-target="10">0</span><span class="stat-plus">+</span>
+          <p class="stat-label">Explicadores</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-numero" data-target="12">0</span><span class="stat-plus"></span>
+          <p class="stat-label">Disciplinas disponíveis</p>
+        </div>
+      </div>
+    </section>
+    <section id="servicos">
+      <div class="holdercards">
+      <div class="holdercard1">
+          <div class="card1">
+            <div class="holder_all">
+              <div class="icon">
+                  <img src="img/icon_livro.png" alt="">
+              </div>
+              <div class="twoinfo">
+              <div class="info-servicos">
+                  <p><strong>Disciplinas</strong></p>
+              </div>
+              <div class="span-servicos">
+                <span>1º ao 3º ciclo</span>
+              </div>
+            </div>  
+            </div>
+          </div>
+          <div class="card2">
+            <div class="holder_all">
+              <div class="icon">
+                  <img src="img/icoon_exam.png" alt="">
+              </div>
+              <div class="twoinfo">
+              <div class="info-servicos">
+                  <p><strong>Preparação para exames</strong></p>
+              </div>
+              <div class="span-servicos">
+                <span>9º, 11º, 12º anos</span>
+              </div>
+            </div>  
+            </div>
+          </div>
+        </div>
+        <div class="holdercard2">
+          <div class="card3">
+            <div class="holder_all">
+              <div class="icon">
+                  <img src="img/icon_therapist.png" alt="">
+              </div>
+              <div class="twoinfo">
+              <div class="info-servicos">
+                  <p><strong>Gabinete de psicologia</strong></p>
+              </div>
+              <div class="span-servicos">
+                <span>Teste vocacionais, avaliações de dislexia e diversos</span>
+              </div>
+            </div>  
+            </div>
+          </div>
+          <div class="card4">
+            <div class="holder_all">
+              <div class="icon">
+                  <img src="img/icon_teatcher.png" alt="">
+              </div>
+              <div class="twoinfo">
+              <div class="info-servicos">
+                  <p><strong>Diversos explicadores</strong></p>
+              </div>
+              <div class="span-servicos">
+                <span>1º ao 3º ciclo</span>
+              </div>
+            </div>  
+            </div>
+          </div>
+          </div>
+      </div>
+    </section>
+    <section id="sobrenos">
+        <div class="holder-about-us">
+           <div class="info">
+              <div class="title-sobre-nos">
+                  <h3>Sobre nós</h3>
+             </div>
+              <div class="info-sobre-nos">
+                  <p>Somos uma equipa apaixonada pelo ensino, com mais de 30 anos de experiência a acompanhar alunos de todas as idades e níveis. Cobrimos todas as disciplinas e acreditamos que cada aluno tem o seu próprio ritmo — o nosso trabalho é encontrá-lo e potenciá-lo."</p>
+              </div>
+            </div>
+
+           <div class="img-info">
+                <img src="img/img_home_page_about_us.gif" alt="">
+           </div>
+        </div>
+    </section>
+     <footer>
+      <div class="holder_footer">
+          <div class="icons">
+            <div class="icon">
+              <img onclick="facebook()" src="img/icon_facebook.png" alt="">
+            </div>
+            <div class="icon">
+              <img onclick="instagram()" src="img/icon_instagram.png" alt="">
+            </div>
+          </div> 
+            
+          <div class="email">
+            <div class="gmail">
+              <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbhDwbflNLjhKWgWfqPTfTsCJnQBxmtSkKrNDfWVfqZZFkCjFpGsPdZZqDRpZcMqLCcjfl">info@geniosextrovertidos.com</a>
+            </div>
+          </div>
+          <div class="contacos">
+            <div class="holdercontact">
+            <div class="wordcontact">
+             <span>CONTACTOS:</span> 
+            </div>
+            <div class="numero">
+              <span>+351 213 961 821</span><br>
+              <span>(chamada para rede fixa)</span>
+            </div>
+            <div class="numero">
+              <span>+351 926 216 514</span><br>
+              <span>(chamada para rede móvel)</span>
+            </div>
+          </div>
+        </div>
+          <div class="logo_footer">
+            <img src="img/logo_genios_extorvertidos.png" alt="">
+          </div>
+          <div class="politicas" >
+            <a href="politicas.html">© Copyright 2026 | Política de Privacidade| Desenvolvido por MB Websites Design</a>
+          </div>
+      </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1068 @@
+
+html{
+
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background-image: url('img/logo_genios_extorvertidos.png');
+    background-size: 160vh;
+    background-position: center;  
+    background-attachment: fixed; /* imagem fica parada ao fazer scroll */
+}
+section{
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)); 
+   overflow: hidden; /* evita margin collapse */
+
+}
+   
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+}
+
+p, a, span, li {
+  font-family: "Lato", sans-serif;
+}
+
+
+header{
+z-index: 1000;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: fixed;
+background-color: rgba(248, 248, 249, 0.826);
+width: 100%;
+height: 100px;
+
+}
+.logo img{
+height: auto;
+width: 90px;
+margin-left: 20px;
+
+}
+.logo span{
+    font-weight: 900;
+    font-family: "Lato", sans-serif;
+   
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+header a {
+text-decoration: none;
+font-weight: 700;
+font-size: 12px;
+color: rgb(20, 20, 20);
+transition: color 0.3s ease;
+
+}
+header nav{
+    display: flex;
+}
+
+header nav a:hover{
+    text-decoration: overline;
+    
+}
+
+#destaque {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.carrossel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carrossel-slide {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.carrossel-slide.ativo {
+    display: block;
+}
+
+/* Containers de cada notícia do destaque */
+.container-destaque-not1,
+.container-destaque-not2,
+.container-destaque-not3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Imagem ocupa tudo como fundo */
+.not1-img,
+.not2-img,
+.not3-img {
+    position: absolute;
+    inset: 0;
+    width: 100% ;
+    height: 100%;
+}
+
+.not1-img img,
+.not2-img img,
+.not3-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.carrossel-slide.ativo .not1-img img,
+.carrossel-slide.ativo .not2-img img,
+.carrossel-slide.ativo .not3-img img {
+    transform: scale(1.03);
+}
+
+/* Gradiente sobre a imagem */
+.container-destaque-not1::after,
+.container-destaque-not2::after,
+.container-destaque-not3::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(73, 104, 117, 0.4) ;
+    z-index: 1;
+}
+
+/* Info sobreposta no fundo */
+.not1-info,
+.not2-info,
+.not3-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 60px 80px;
+    color: #fff;
+}
+
+.not1-info h3,
+.not2-info h3,
+.not3-info h3 {
+    font-size: 33px;
+    font-weight: 800;
+    font-family: Montserrat, sans-serif;
+    margin: 0 0 12px 0;
+    line-height: 1.2;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+.not1-info p,
+.not2-info p,
+.not3-info p {
+    font-size: 18px;
+    font-family: Montserrat, sans-serif;
+    color: rgba(255,255,255,0.82);
+    margin: 0;
+    max-width: 600px;
+    height: auto;
+    line-height: 1.6;
+}
+
+/* Etiqueta de destaque */
+.not1-info::before,
+.not2-info::before,
+.not3-info::before {
+    content: '★ DESTAQUE';
+    display: inline-block;
+    background: rgba(6, 8, 8, 0.9);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 2px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+/* Setas posicionadas absolutamente */
+.setas-container {
+    position: absolute;
+    bottom: 40px;
+    right: 80px;
+    display: flex;
+    gap: 12px;
+    z-index: 3;
+}
+
+#destaque .setadestaque {
+
+    border: 2px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(6px);
+    color: white;
+    padding: 14px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+#destaque .setadestaque:hover {
+    background-color: rgba(255,255,255,0.28);
+    border-color: rgba(255,255,255,0.9);
+    transform: scale(1.08);
+}
+/* STATS */
+#stats {
+  
+  padding: 60px 40px;
+   background-color: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+   
+}
+
+.stats-container {
+  
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 110px;
+}
+
+.stat-card {
+  text-align: center;
+  color: white;
+  
+}
+
+.stat-numero {
+  font-size: 50px;
+  font-weight: 700;
+  color:  rgb(74, 141, 167) ; /* cor de destaque */
+ 
+}
+
+.stat-plus {
+  font-size: 40px;
+  font-weight: 700;
+  color:  rgba(74, 141, 167, 0.85) ;
+  
+}
+
+.stat-label {
+  font-size: 20px;
+  margin-top: 10px;
+   color: #2f2f2f;
+   font-weight: 700;
+   text-shadow:  0.5px 0.5px 10px  rgb(255, 255, 255);
+
+
+}
+.holdercards{
+  padding-top: 150px;
+  padding-bottom: 200px;
+}
+.holdercard1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 200px;
+}
+.holdercard2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 200px;
+    margin-top: 70px;
+}
+.card1{
+    width: 400px;
+    height: 100px ;
+    border-radius: 20px;
+    background-color:#c5e3fc;
+    border-left: solid 5px   rgba(3, 0, 154, 0.85) ;}
+.card2{
+    width: 400px;
+    height: 100px ;
+    border-radius: 20px;
+     background-color:#c5e3fc;
+    border-left: solid 5px   rgba(3, 0, 154, 0.85) ;
+}
+.card3 {
+    width: 400px;
+    height: 100px ;
+    border-radius: 20px;
+     background-color:#c5e3fc;
+    border-left: solid 5px   rgba(3, 0, 154, 0.85) ;
+}
+.card3 span{
+    font-size: 13px;
+}
+.card4{
+    width: 400px;
+    height: 100px ;
+    border-radius: 20px;
+     background-color:#c5e3fc;
+    border-left: solid 5px   rgba(3, 0, 154, 0.85) ;
+}
+.holder_all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+    
+   
+
+}
+.icon img {
+    height: 60px;
+    width: auto;
+    margin-right: 30px;
+  
+}
+.twoinfo{
+    flex-direction: column;
+}
+#sobrenos{ 
+    height: 100vh;
+     
+}
+.info{
+    margin-top: 0px;
+    height: auto;
+    width: 500px;
+
+}
+.info h3{
+    font-size: 70px;
+    color:  rgba(74, 141, 167, 0.85) ;
+    text-shadow: 0.5px 0.5px 2px  black;
+}
+.info-sobre-nos p{
+    font-size: 23px;
+}
+.img-info img{
+    margin-top: 0px;
+    height: 300px;
+    width: auto;
+}
+.holder-about-us{
+    display: flex;
+    justify-content: center ;
+    gap: 200px;
+    align-items: center;
+   
+   
+}
+/*style fo footer */
+footer {
+  background-color: #1a1a2e;
+  padding: 50px 40px;
+}
+
+
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.icons img {
+  height: 35px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.icon img:hover {
+  opacity: 1;
+}
+
+/* EMAILS */
+.email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gmail a {
+  text-decoration: none;
+  color: #aaa;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.gmail a:hover {
+  color: #f5a623;
+}
+
+/* CONTACTOS */
+.contacos {
+  display: flex;
+  flex-direction: column;
+}
+
+.holdercontact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wordcontact span {
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.numero span {
+  color: #aaa;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+}
+
+/* LOGO */
+.logo_footer img {
+  height: 80px;
+  width: auto;
+  opacity: 0.9;
+}
+.holder_footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ÍCONES REDES SOCIAIS */
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Monitor grande (4K / ultrawide) */
+@media (min-width: 1600px) {
+  .holdercard1,
+  .holdercard2 {
+    gap: 300px;
+  }
+
+  .card1, .card2, .card3, .card4 {
+    width: 500px;
+    height: 120px;
+  }
+
+  .not1-info h1,
+  .not2-info h1,
+  .not3-info h1 {
+    font-size: 64px;
+  }
+
+  .not1-info p,
+  .not2-info p,
+  .not3-info p {
+    font-size: 22px;
+    max-width: 800px;
+  }
+
+  .holder-about-us {
+    gap: 300px;
+    margin-top: 0px;
+  }
+
+  .info {
+    width: 650px;
+  }
+
+  .info h3 {
+    font-size: 100px;
+  }
+
+  .info-sobre-nos p {
+    font-size: 36px;
+  }
+
+  .stat-numero {
+    font-size: 64px;
+  }
+
+  .stat-plus {
+    font-size: 52px;
+  }
+
+  .stat-label {
+    font-size: 24px;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  header a {
+    font-size: 12px;
+    margin-right: 70px;
+  }
+}
+
+/* Desktop padrão (1280px–1599px) — o teu CSS base já cobre, mas podes afinar aqui */
+@media (min-width: 1280px) and (max-width: 1599px) {
+
+    .not1-info h3,
+.not2-info h3,
+.not3-info h3 {
+    font-size: 24px;
+    
+}
+  .holdercard1,
+  .holdercard2 {
+    gap: 180px;
+  }
+
+  .holder-about-us {
+    gap: 180px;
+  }
+  header a {
+    margin-right: 70px;
+  }
+}
+
+/* Desktop pequeno / portátil grande */
+@media (max-width: 1280px) {
+
+    .not1-info h3,
+.not2-info h3,
+.not3-info h3 {
+    font-size: 20px;
+    
+}
+  .holdercard1,
+  .holdercard2 {
+    gap: 100px;
+  }
+
+  .holder-about-us {
+    gap: 120px;
+  }
+
+  header a {
+    margin-right: 70px;
+  }
+}
+
+/* Portátil (13"–15") */
+@media (max-width: 1024px) {
+
+    .not1-info h3,
+.not2-info h3,
+.not3-info h3 {
+    font-size: 20px;
+    
+}
+
+
+  .holdercard1,
+  .holdercard2 {
+    gap: 60px;
+  }
+
+  .card1, .card2, .card3, .card4 {
+    width: 320px;
+  }
+
+  .holder-about-us {
+    gap: 80px;
+    margin-top: 120px;
+  }
+
+  .info {
+    width: 380px;
+  }
+
+  .info h3 {
+    font-size: 60px;
+  }
+
+  .info-sobre-nos p {
+    font-size: 22px;
+  }
+
+  .not1-info h1,
+  .not2-info h1,
+  .not3-info h1 {
+    font-size: 36px;
+  }
+
+  .not1-info p,
+  .not2-info p,
+  .not3-info p {
+    font-size: 16px;
+  }
+
+  .not1-info,
+  .not2-info,
+  .not3-info {
+    padding: 50px 60px;
+  }
+
+  .setas-container {
+    right: 60px;
+  }
+
+  .stat-numero {
+    font-size: 42px;
+  }
+
+  .stat-plus {
+    font-size: 34px;
+  }
+
+  .stat-label {
+    font-size: 17px;
+  }
+
+  header a {
+    margin-right: 30px;
+    font-size: 14px;
+  }
+}
+
+/* Tablet deitado */
+@media (max-width: 900px) {
+
+    .not1-info h3,
+.not2-info h3,
+.not3-info h3 {
+    font-size: 15px;
+    
+}
+  .holdercard1,
+  .holdercard2 {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .card1, .card2, .card3, .card4 {
+    width: 85vw;
+  }
+
+  .holder-about-us {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 80px;
+    text-align: center;
+  }
+
+  .info {
+    width: 85vw;
+  }
+
+  .info h3 {
+    font-size: 50px;
+  }
+
+  .not1-info h1,
+  .not2-info h1,
+  .not3-info h1 {
+    font-size: 32px;
+  }
+
+  .not1-info,
+  .not2-info,
+  .not3-info {
+    padding: 40px 40px;
+  }
+
+  .setas-container {
+    right: 40px;
+  }
+}
+
+/* Tablet em pé */
+@media (max-width: 768px) {
+    .not1-info h3,
+.not2-info h3,
+.not3-info h3 {
+    font-size: 15px;
+    
+}
+  .stats-container {
+    gap: 30px;
+    padding-top: 80px;
+  }
+
+  .stat-numero {
+    font-size: 38px;
+  }
+
+  .stat-plus {
+    font-size: 30px;
+  }
+
+  .stat-label {
+    font-size: 16px;
+  }
+
+  .not1-info h1,
+  .not2-info h1,
+  .not3-info h1 {
+    font-size: 26px;
+  }
+
+  .not1-info p,
+  .not2-info p,
+  .not3-info p {
+    font-size: 14px;
+  }
+
+  .img-info img {
+    height: 220px;
+  }
+
+  .holder_footer {
+    gap: 30px;
+  }
+}
+
+/* Mobile grande (iPhone Plus, Samsung S) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 65px;
+        padding: 0;
+    }
+
+    .logo img {
+        width: 45px;
+        margin-left: 12px;
+    }
+
+    .logo span {
+        font-size: 11px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    header nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(248, 248, 249, 0.97);
+        padding: 20px 0;
+        gap: 0;
+        margin-right: 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    header nav.open {
+        display: flex;
+    }
+
+    header nav a {
+        padding: 14px 24px;
+        font-size: 14px;
+        border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+
+    header nav a:hover {
+        background-color: rgba(197, 227, 252, 0.5);
+        text-decoration: none;
+    }
+
+
+ /* --- DESTAQUE MOBILE FIX --- */
+  #destaque,
+  .carrossel,
+  .carrossel-slide,
+  .carrossel-slide.ativo {
+    height: auto;
+    min-height: unset;
+  }
+
+  .container-destaque-not1,
+  .container-destaque-not2,
+  .container-destaque-not3 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+
+  /* Imagem ocupa a parte de cima, com altura fixa */
+  .not1-img,
+  .not2-img,
+  .not3-img {
+    position: relative;
+    inset: unset;
+    width: 100%;
+    height: 55vw; /* ajusta à tua preferência */
+  }
+
+  .not1-img img,
+  .not2-img img,
+  .not3-img img {
+    padding-top: 61px;
+    object-fit: cover; /* volta a cover para preencher bem */
+    background-color: unset;
+  }
+
+  /* Remove o gradiente que ficava sobre a imagem full-height */
+  .container-destaque-not1::after,
+  .container-destaque-not2::after,
+  .container-destaque-not3::after {
+    display: none;
+  }
+
+  /* Texto sai do absolute e aparece ABAIXO da imagem */
+  .not1-info,
+  .not2-info,
+  .not3-info {
+    position: static;
+    padding: 20px 16px 70px; /* padding bottom para não tapar as setas */
+    color: #111; /* texto escuro pois já não há fundo escuro */
+    background-color: rgba(255,255,255,0.92);
+  }
+
+  /* Ajusta cores do texto para fundo claro */
+  .not1-info h3,
+  .not2-info h3,
+  .not3-info h3 {
+    color: #1a1a2e;
+    text-shadow: none;
+  }
+
+  .not1-info p,
+  .not2-info p,
+  .not3-info p {
+    color: #444;
+    
+  
+  }
+
+  /* Etiqueta DESTAQUE — mantém fundo escuro */
+  .not1-info::before,
+  .not2-info::before,
+  .not3-info::before {
+    background: rgba(6, 8, 8, 0.85);
+    color: #fff;
+  }
+
+  /* Setas ficam no canto inferior direito do texto */
+ .setas-container {
+    position: static;  /* sai do absolute, entra no fluxo normal */
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 16px 16px;
+    background-color: rgba(255,255,255,0.92); /* igual ao fundo do texto */
+  }
+  
+  
+
+.card1, .card2, .card3, .card4 {
+    width: 90vw;
+    height: auto;        /* deixa o conteúdo definir a altura */
+    padding: 12px 16px;  /* espaço interno confortável */
+    font-size: 13px;     /* texto mais pequeno */
+  }
+
+  .holder_all {
+    gap: 8px;
+  }
+
+  .icon img {
+    height: 40px;        /* ícone mais pequeno */
+    margin-right: 15px;
+  }
+
+  .stats-container {
+    gap: 20px;
+    padding-top: 60px;
+  }
+
+  .stat-numero {
+    font-size: 36px;
+  }
+
+  .stat-plus {
+    font-size: 28px;
+  }
+   .holdercards {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .stats-container {
+    padding-top: 30px;
+  }
+
+  #sobrenos {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  #stats {
+    padding: 40px 20px;
+  }
+
+  .holder-about-us {
+    margin-top: 30px;
+  }
+  .stat-label {
+    font-size: 15px;
+  }
+
+  .info h3 {
+    font-size: 40px;
+  }
+
+  .info-sobre-nos p {
+    font-size: 20px;
+  }
+
+
+
+  #servicos {
+    padding-top: 60px;
+  } 
+  .not1-img img,
+    .not2-img img,
+    .not3-img img {
+        object-fit: contain;
+        object-position: center;
+        background-color: #000; /* preenche as barras laterais */
+    }
+
+    .carrossel-slide {
+        height: 60vh; /* reduz altura para a imagem não ficar demasiado pequena */
+    }
+
+    #destaque {
+        height: 60vh;
+    }
+.holder_footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+}
+
+.icons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+.email {
+    justify-content: center;
+}
+
+.contacos {
+    align-items: center;
+}
+ 
+}
+
+
+
+/* Mobile pequeno (iPhone SE, telemóveis antigos) */
+@media (max-width: 400px) {
+  .not1-info h1,
+  .not2-info h1,
+  .not3-info h1 {
+    font-size: 18px;
+  }
+
+  .card1, .card2, .card3, .card4 {
+    width: 95vw;
+    height: auto;
+    padding: 10px 0px; 
+  }
+
+
+
+  .info h3 {
+    font-size: 32px;
+  }
+
+  .stat-numero {
+    font-size: 30px;
+  }
+
+  .stat-plus {
+    font-size: 24px;
+  }
+
+  .logo img {
+    width: 70px;
+  }
+
+  header a {
+    font-size: 13px;
+  }
+
+    #destaque {
+        height: 100svh; /* svh = small viewport height, evita o problema da barra do browser */
+    }
+
+    .carrossel-slide {
+        height: 100svh;
+    }
+
+    .container-destaque-not1,
+    .container-destaque-not2,
+    .container-destaque-not3 {
+        height: 100%;
+    }
+
+    .not1-img,
+    .not2-img,
+    .not3-img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .not1-img img,
+    .not2-img img,
+    .not3-img img {
+        object-fit: contain;
+        object-position: center;
+        background-color: #000; /* preenche as barras laterais */
+    }
+
+    .carrossel-slide {
+        height: 60vh; /* reduz altura para a imagem não ficar demasiado pequena */
+    }
+
+    #destaque {
+        height: 60vh;
+    }
+
+}

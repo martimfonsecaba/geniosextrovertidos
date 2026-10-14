@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Génios Extrovertidos</title>
+    <link rel="icon" href="img/logo_genios_extorvertidos.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="informacao.css">
+    <link rel="stylesheet" href="hamburger.css">
+    <link rel="stylesheet" href="nomepoliticas.css">
+</head>
+<body>
+
+    <header>
+    <div class="logo">
+        <img src="img/logo_genios_extorvertidos.png" alt="">
+        <span>GÉNIOS EXTROVERTIDOS</span>
+    </div>
+
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="nav-menu">
+        <a href="index.html">HOME</a>
+        <a href="equipa.html">EQUIPA</a>
+        <a href="about.html">SOBRE NÓS</a>
+        <a href="informacao.html">INFORMAÇÕES</a>
+        <a href="testemunhos.html">TESTEMUNHOS</a>
+        <a href="contatos.html">CONTACTOS</a>
+    </nav>
+</header>
+
+    <!-- HERO -->
+    <section id="info-hero">
+        <div class="info-hero-content">
+            <h1>Informações</h1>
+            <p>Tudo o que precisas de saber antes de começar</p>
+        </div>
+    </section>
+
+    <!-- HORÁRIOS -->
+    <section id="horarios">
+        <div class="section-container">
+            <div class="section-icon"><i class="fa-regular fa-clock"></i></div>
+            <h2>Horários</h2>
+            <div class="cards-row">
+                <div class="info-card">
+                    <strong>Segunda a Sexta</strong>
+                    <span>12h00 – 18h00</span>
+                </div>
+                <div class="info-card">
+                    <strong>Sábado</strong>
+                    <span>9h00 – 13h00</span>
+                </div>
+                <div class="info-card">
+                    <strong>Domingo</strong>
+                    <span>Encerrado</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- COMO FUNCIONA -->
+    <section id="como-funciona">
+        <div class="section-container">
+            <div class="section-icon"><i class="fa-solid fa-list-check"></i></div>
+            <h2>Início de um caminho de sucesso</h2>
+            <div class="steps-row">
+                <div class="step">
+                    <div class="step-numero">1</div>
+                    <strong>Contacta-nos</strong>
+                    <span>Por telefone, email ou redes sociais</span>
+                </div>
+                <div class="step-seta"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="step">
+                    <div class="step-numero">2</div>
+                    <strong>Avaliação Inicial</strong>
+                    <span>Percebemos o nível e as necessidades do aluno</span>
+                </div>
+                <div class="step-seta"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="step">
+                    <div class="step-numero">3</div>
+                    <strong>Combinamos Horário</strong>
+                    <span>É escolhido um horário ideal</span>
+                </div>
+                <div class="step-seta"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="step">
+                    <div class="step-numero">4</div>
+                    <strong>Começamos!</strong>
+                    <span>Primeira aula de uma experiência excelente</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="section-container">
+            <div class="section-icon">
+            <h2>Perguntas Frequentes <i class="fa-regular fa-circle-question"></i></h2>
+            </div>
+            <div class="faq-lista">
+                <div class="faq-item">
+                    <div class="faq-pergunta" onclick="toggleFaq(this)">
+                        <span>Que tipos de aulas têm ?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>- Exp. Individual - Para uma aprendizagem focada no aluno e ao seu ritmo.</p>
+                          <p> - Exp. em grupo - Apenas 2 alunos com características semelhantes, que se podem ajudar durante a explicação.</p> 
+                          <p>- Estudo Acompanhado - Grupo de alunos (máximo 5) que durante 1,5 horas organizam o estudo, revêem matérias, e preparam-se para os testes, na presença de um explicador que os orienta.</p>
+
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-pergunta" onclick="toggleFaq(this)">
+                        <span>Como são os pagamentos ?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>os pagamentos são feitos através de uma mensalidade, que engloba as aulas normais acordadas (por ex. 1 vez por semana) e um reforço na época de testes </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-pergunta" onclick="toggleFaq(this)">
+                        <span>Que tipo de trabalho realiza o Gabinete de Psicopedagogia?"</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>O Gabinete de Psicopedagogia trabalha em estreita articulação com a equipa pedagógica. Realiza avaliações psicopedagógicas, trabalho especializado em dificuldades de aprendizagem, processos de orientação vocacional, aconselhamento parental, entre outros."</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-pergunta" onclick="toggleFaq(this)">
+                        <span>Quais as disciplinas disponíveis?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>Temos explicadores para as disciplinas do 1º ao 3º ciclo, incluindo preparação para exames nacionais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACTO / ENVIAR MENSAGEM -->
+
+
+     <footer>
+      <div class="holder_footer">
+          <div class="icons">
+            <div class="icon">
+              <img onclick="facebook()" src="img/icon_facebook.png" alt="">
+            </div>
+            <div class="icon">
+              <img onclick="instagram()" src="img/icon_instagram.png" alt="">
+            </div>
+          </div> 
+            
+          <div class="email">
+            <div class="gmail">
+              <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbhDwbflNLjhKWgWfqPTfTsCJnQBxmtSkKrNDfWVfqZZFkCjFpGsPdZZqDRpZcMqLCcjfl">info@geniosextrovertidos.com</a>
+            </div>
+          </div>
+          <div class="contacos">
+            <div class="holdercontact">
+            <div class="wordcontact">
+             <span>CONTACTOS:</span> 
+            </div>
+            <div class="numero">
+              <span>+351 213 961 821</span><br>
+              <span>(chamada para rede fixa)</span>
+            </div>
+            <div class="numero">
+              <span>+351 926 216 514</span><br>
+              <span>(chamada para rede móvel)</span>
+            </div>
+          </div>
+        </div>
+          <div class="logo_footer">
+            <img src="img/logo_genios_extorvertidos.png" alt="">
+          </div>
+          <div class="politicas" >
+            <a href="politicas.html">© Copyright 2026 | Política de Privacidade| Desenvolvido por MB Websites Design</a>
+          </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

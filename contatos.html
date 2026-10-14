@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Génios Extrovertidos</title>
+    <link rel="icon" href="img/logo_genios_extorvertidos.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contatos.css">
+    <link rel="stylesheet" href="hamburger.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="nomepoliticas.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+     <header>
+    <div class="logo">
+        <img src="img/logo_genios_extorvertidos.png" alt="">
+        <span>GÉNIOS EXTROVERTIDOS</span>
+    </div>
+
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="nav-menu">
+        <a href="index.html">HOME</a>
+        <a href="equipa.html">EQUIPA</a>
+        <a href="about.html">SOBRE NÓS</a>
+        <a href="informacao.html">INFORMAÇÕES</a>
+        <a href="testemunhos.html">TESTEMUNHOS</a>
+        <a href="contatos.html">CONTACTOS</a>
+    </nav>
+</header>
+    <section id="contacto">
+    <div class="section-container">
+        <div class="section-icon">
+            <h2>Enviar Mensagem <i class="fa-regular fa-envelope"></i></h2>
+        </div>
+    <div class="bgform">
+        <form id="formContacto" class="form-contacto">
+            <div class="form-linha">
+                <input type="text" name="nome" placeholder="O teu nome" required>
+            </div>
+
+            <div class="form-linha">
+                <input type="email" name="email" placeholder="O teu email" required>
+            </div>
+
+
+            <div class="form-linha">
+                <textarea name="mensagem" rows="5" placeholder="Escreve a tua mensagem..." required></textarea>
+            </div>
+
+            <div class="form-linha">
+                <button type="submit">
+                    <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem
+                </button>
+            </div>
+            <p id="estadoMensagem" style="text-align:center; font-weight:700; color:green;"></p>
+            
+        </form>
+      </div>
+    </div>
+</section>
+
+
+    <!-- LOCALIZAÇÃO -->
+    <section id="localizacao">
+        <div class="section-container">
+            <div class="section-icon">
+            <h2>Onde estamos <i class="fa-solid fa-location-dot"></i></h2>
+        </div>
+            <div class="mapa-holder">
+                <div class="mapa-info">
+                    <p><i class="fa-solid fa-map-pin"></i> Av.Infante Santo, Nº 54, Lisboa</p>
+                    <p><i class="fa-solid fa-phone"></i>+351 213 961 821 (chamada para rede fixa)</p>
+                    <p><i class="fa-solid fa-phone"></i>351 926 216 514 (chamada para rede móvel)</p>
+                    <p><i class="fa-solid fa-bus"></i> Metro: Estação Rato — 29 min a pé</p>
+                    <p><i class="fa-solid fa-car"></i> Estacionamento Pago (EMEL)</p>
+                   
+                </div>
+                <div class="mapa-embed">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.440789307403!2d-9.1671907!3d38.707687799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19352124e08fb3%3A0x220d4ec0ebeb0d93!2sG%C3%A9nios%20Extrovertidos%20-%20Centro%20de%20Explica%C3%A7%C3%B5es!5e0!3m2!1spt-PT!2spt!4v1773513537146!5m2!1spt-PT!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <footer>
+      <div class="holder_footer">
+          <div class="icons">
+            <div class="icon">
+              <img onclick="facebook()" src="img/icon_facebook.png" alt="">
+            </div>
+            <div class="icon">
+              <img onclick="instagram()" src="img/icon_instagram.png" alt="">
+            </div>
+          </div> 
+            
+          <div class="email">
+            <div class="gmail">
+              <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbhDwbflNLjhKWgWfqPTfTsCJnQBxmtSkKrNDfWVfqZZFkCjFpGsPdZZqDRpZcMqLCcjfl">info@geniosextrovertidos.com</a>
+            </div>
+          </div>
+          <div class="contacos">
+            <div class="holdercontact">
+            <div class="wordcontact">
+             <span>CONTACTOS:</span> 
+            </div>
+            <div class="numero">
+              <span>+351 213 961 821</span><br>
+              <span>(chamada para rede fixa)</span>
+            </div>
+            <div class="numero">
+              <span>+351 926 216 514</span><br>
+              <span>(chamada para rede móvel)</span>
+            </div>
+          </div>
+        </div>
+          <div class="logo_footer">
+            <img src="img/logo_genios_extorvertidos.png" alt="">
+          </div>
+          <div class="politicas" >
+            <a href="politicas.html">© Copyright 2026 | Política de Privacidade| Desenvolvido por MB Websites Design</a>
+          </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+
+    <!-- Se não funcionar depois de tudo correto, as causas mais prováveis por ordem:
+
+---
+
+**1. O template do EmailJS não tem as variáveis certas**
+No teu template no site do EmailJS, as variáveis têm de ter **exatamente** os mesmos nomes que os `name` dos inputs:
+
+```
+{{nome}}
+{{email}}
+{{mensagem}}
+```
+
+---
+
+**2. O Service ID ou Template ID estão errados**
+No teu JS verifica se batem certo com o que está no dashboard do EmailJS:
+
+```javascript
+emailjs.sendForm("service_6d7g7dj", "template_yhrhib7", this)
+//                ^^^^^^^^^^^^^^^^   ^^^^^^^^^^^^^^^^
+//                vai ao EmailJS e confirma estes dois IDs
+```
+
+---
+
+**3. A Public Key está errada**
+```javascript
+emailjs.init("wBgry6vdqAVz-ACm0"); // confirma esta chave em
+                                    // Account > General > Public Key
+```
+
+---
+
+**4. O email de destino não está configurado no template**
+No template do EmailJS tens de ter o campo **"To Email"** preenchido com o teu email, senão não sabe para onde enviar.
+
+---
+
+**Como debugar rapidamente** — abre a consola (F12) e vê o erro. O EmailJS devolve sempre um objeto com o erro específico. Podes também fazer:
+
+```javascript
+.then(function() {
+    console.log("SUCESSO");
+}, function(error) {
+    console.log("ERRO:", error); // ← diz exatamente o que falhou
+});
+``` -->
+</body>
+</html>

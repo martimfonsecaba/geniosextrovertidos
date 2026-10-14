@@ -1,0 +1,571 @@
+
+html{
+
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background-image: url('img/logo_genios_extorvertidos.png');
+    background-size: 160vh;
+    background-position: center;  
+    background-attachment: fixed; /* imagem fica parada ao fazer scroll */
+}
+section{
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)); 
+  overflow: hidden;
+
+}
+   
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+}
+
+p, a, span, li {
+  font-family: "Lato", sans-serif;
+}
+
+
+header{
+z-index: 1000;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: fixed;
+background-color: rgba(248, 248, 249, 0.826);
+width: 100%;
+height: 100px;
+
+}
+.logo img{
+height: auto;
+width: 90px;
+margin-left: 20px;
+
+}
+.logo span{
+    font-weight: 900;
+    font-family: "Lato", sans-serif;
+   
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+header a {
+text-decoration: none;
+font-weight: 700;
+font-size: 12px;
+color: rgb(20, 20, 20);
+transition: color 0.3s ease;
+
+
+}
+header nav{
+    display: flex;
+    gap: 70px;
+    margin-right: 70px;
+}
+
+header nav a:hover{
+    text-decoration: overline;
+    
+}
+
+/* HERO */
+#info-hero {
+    height: 30vh;
+    background-color: rgba(47, 171, 208, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+#info-hero h1 {
+    font-size: 64px;
+    color: white;
+    margin: 0;
+    text-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+#info-hero p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.85);
+    margin: 10px 0 0;
+}
+.allcards{
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+.holderall{
+    display: flex;
+    justify-content: center;
+    padding: 70px;
+    gap: 80px;
+    margin-bottom: 60px;
+}
+.card{
+    height: auto;
+    width: 500px;
+    background-color: rgba(158, 235, 245, 0.966);
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px black;
+    align-items: center;
+    
+    
+}
+.name{
+    display: flex;
+    justify-content: flex-start;      
+}
+.name p{
+    margin-left:25px ;
+}
+
+.holdermidle img{
+    height: 60px;
+    width: auto;
+    border-radius: 40px;
+    margin-left: 25px;
+}
+.holdermidle {
+   
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 35px;
+}
+
+.holdermidle p {
+    margin-right: 15px;
+    align-items: center;
+}
+.avaliacao{
+    display: flex;
+    justify-content: end;
+    margin-left: 70px;
+    
+}
+.avaliacao p{
+        margin-right: 10px;
+        margin-top: 0px;
+}
+.avaliacao i{
+    color: #f5a623;  
+}
+
+/*style fo footer */
+/*style fo footer */
+footer {
+  background-color: #1a1a2e;
+  padding: 50px 40px;
+}
+
+.holder_footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ÍCONES REDES SOCIAIS */
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.icons img {
+  height: 35px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.icon img:hover {
+  opacity: 1;
+}
+
+/* EMAILS */
+.email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gmail a {
+  text-decoration: none;
+  color: #aaa;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.gmail a:hover {
+  color: #f5a623;
+}
+
+/* CONTACTOS */
+.contacos {
+  display: flex;
+  flex-direction: column;
+}
+
+.holdercontact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wordcontact span {
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.numero span {
+  color: #aaa;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+}
+
+/* LOGO */
+.logo_footer img {
+  height: 80px;
+  width: auto;
+  opacity: 0.9;
+}
+
+/* Monitor grande (4K / ultrawide) */
+@media (min-width: 1600px) {
+  #info-hero h1 {
+    font-size: 90px;
+  }
+
+  #info-hero p {
+    font-size: 24px;
+  }
+
+  .holderall {
+    gap: 120px;
+    padding: 90px;
+  }
+
+  .card {
+    width: 650px;
+  }
+
+  .holdermidle img {
+    height: 80px;
+  }
+
+  .holdermidle {
+    gap: 45px;
+  }
+
+  .name p,
+  .holdermidle p,
+  .avaliacao p {
+    font-size: 18px;
+  }
+
+  .logo_footer img {
+    height: 100px;
+  }
+
+  footer {
+    padding: 70px 60px;
+  }
+}
+
+/* Desktop padrão */
+@media (min-width: 1280px) and (max-width: 1599px) {
+  #info-hero h1 {
+    font-size: 72px;
+  }
+
+  .holderall {
+    gap: 80px;
+  }
+
+  .card {
+    width: 480px;
+  }
+}
+
+/* Desktop pequeno */
+@media (max-width: 1280px) {
+  #info-hero h1 {
+    font-size: 54px;
+  }
+
+  .holderall {
+    gap: 50px;
+    padding: 50px;
+  }
+
+  .card {
+    width: 420px;
+  }
+}
+
+/* Portátil (13"–15") */
+@media (max-width: 1024px) {
+  #info-hero h1 {
+    font-size: 44px;
+  }
+
+  #info-hero p {
+    font-size: 16px;
+  }
+
+  .holderall {
+    gap: 30px;
+    padding: 40px;
+  }
+
+  .card {
+    width: 360px;
+  }
+
+  .holdermidle img {
+    height: 50px;
+  }
+
+  .holdermidle {
+    gap: 20px;
+  }
+
+  header a {
+    margin-right: 30px;
+    font-size: 14px;
+  }
+
+  .allcards {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+}
+
+/* Tablet deitado */
+@media (max-width: 900px) {
+  #info-hero {
+    height: auto;
+    padding: 100px 30px 50px;
+  }
+
+  #info-hero h1 {
+    font-size: 36px;
+  }
+
+  #info-hero p {
+    font-size: 15px;
+  }
+
+  .holderall {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 20px;
+  }
+
+  .card {
+    width: 85vw;
+    max-width: 500px;
+  }
+
+  .allcards {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .holder_footer {
+    gap: 28px;
+  }
+}
+
+/* Tablet em pé */
+@media (max-width: 768px) {
+  #info-hero h1 {
+    font-size: 30px;
+  }
+
+  #info-hero p {
+    font-size: 14px;
+  }
+
+  .card {
+    width: 90vw;
+  }
+
+  .holdermidle img {
+    height: 46px;
+    margin-left: 16px;
+  }
+
+  .holdermidle {
+    gap: 14px;
+  }
+
+  .name p {
+    font-size: 14px;
+    margin-left: 16px;
+  }
+
+  .holdermidle p {
+    font-size: 13px;
+  }
+
+  .avaliacao p {
+    font-size: 13px;
+  }
+
+  .avaliacao {
+    margin-left: 16px;
+  }
+}
+
+/* Mobile grande */
+@media (max-width: 600px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 65px;
+        padding: 0;
+    }
+
+    .logo img {
+        width: 45px;
+        margin-left: 12px;
+    }
+
+    .logo span {
+        font-size: 11px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    header nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(248, 248, 249, 0.97);
+        padding: 20px 0;
+        gap: 0;
+        margin-right: 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    header nav.open {
+        display: flex;
+    }
+
+    header nav a {
+        padding: 14px 24px;
+        font-size: 14px;
+        border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+
+    header nav a:hover {
+        background-color: rgba(197, 227, 252, 0.5);
+        text-decoration: none;
+    }
+
+  footer {
+    padding: 40px 20px;
+  }
+
+  .logo_footer img {
+    height: 60px;
+  }
+
+  .gmail a {
+    font-size: 14px;
+  }
+
+  .numero span {
+    font-size: 13px;
+  }
+  .holder_footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+}
+
+.icons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+.email {
+    justify-content: center;
+}
+
+.contacos {
+    align-items: center;
+}
+}
+
+/* Mobile pequeno */
+@media (max-width: 400px) {
+  #info-hero h1 {
+    font-size: 20px;
+  }
+
+  .card {
+    width: 98vw;
+    border-radius: 10px;
+  }
+
+  .holdermidle img {
+    height: 34px;
+    margin-left: 8px;
+  }
+
+  .holdermidle {
+    gap: 8px;
+  }
+
+  .name p {
+    font-size: 12px;
+    margin-left: 8px;
+  }
+
+  .holdermidle p,
+  .avaliacao p {
+    font-size: 11px;
+  }
+
+  .logo img {
+    width: 70px;
+  }
+
+  header a {
+    font-size: 13px;
+  }
+
+  footer {
+    padding: 30px 14px;
+  }
+}

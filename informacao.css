@@ -1,0 +1,697 @@
+html{
+
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background-image: url('img/logo_genios_extorvertidos.png');
+    background-size:160vh;
+    background-position: center;  
+    background-attachment: fixed; /* imagem fica parada ao fazer scroll */
+}
+section{
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)); 
+
+}
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+}
+
+p, a, span, li {
+  font-family: "Lato", sans-serif;
+}
+
+header{
+z-index: 1000;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: fixed;
+background-color: rgba(248, 248, 249, 0.826);
+width: 100%;
+height: 100px;
+
+}
+.logo img{
+height: auto;
+width: 90px;
+margin-left: 20px;
+
+}
+.logo span{
+    font-weight: 900;
+    font-family: "Lato", sans-serif;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+header a {
+text-decoration: none;
+font-weight: 700;
+gap: 150px;
+font-size: 12px;
+color: rgb(20, 20, 20);
+margin-right: 70px;
+transition: color 0.3s ease;
+margin-right: 70px  ;
+
+
+}
+header nav{
+    display: flex;
+}
+
+header nav a:hover{
+    text-decoration: overline;
+    
+}
+
+/* HERO */
+#info-hero {
+    height: 30vh;
+    background-color: rgba(47, 171, 208, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+  
+}
+#info-hero h1 {
+    font-size: 64px;
+    color: white;
+    margin: 0;
+    text-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+#info-hero p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.85);
+    margin: 10px 0 0;
+}
+
+/* SECÇÕES */
+section { padding: 70px 40px; }
+
+.section-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-icon i{
+    font-size: 40px;
+    color: rgba(74, 141, 167, 0.85);
+    margin-bottom: 10px;
+}
+
+.section-container h2 {
+    font-size: 42px;
+    color: #1a1a2e;
+    margin: 0 0 40px;
+}
+
+/* CARDS GENÉRICOS */
+.cards-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.info-card {
+     background-color:#c5e3fc;
+    border-left: solid 5px   rgba(3, 0, 154, 0.85) ;
+    border-radius: 16px;
+    padding: 24px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 180px;
+}
+.info-card strong { font-size: 16px; color: #1a1a2e; }
+.info-card span { font-size: 22px; font-weight: 700; color: rgba(29, 29, 29, 0.85); }
+
+/* PREÇOS */
+
+/* COMO FUNCIONA */
+.steps-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.step {
+     background-color:#c5e3fc;
+    border-left: solid 5px   rgba(3, 0, 154, 0.85) ;
+    border-radius: 16px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 160px;
+}
+.step-numero {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color:#a0a7f8;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.step strong { font-size: 14px; color: #1a1a2e; }
+.step span { font-size: 12px; color: #555; text-align: center; }
+.step-seta { font-size: 24px; color: white; }
+
+/* FAQ */
+.faq-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.faq-item {
+     background-color:#c5e3fc;
+    border-left: solid 5px   rgba(3, 0, 154, 0.85) ;
+    border-radius: 14px;
+    overflow: hidden;
+}
+.faq-pergunta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    color: #1a1a2e;
+}
+.faq-pergunta i {
+    transition: transform 0.3s;
+    color: rgba(74, 141, 167, 0.85);
+}
+.faq-item.aberto .faq-pergunta i { transform: rotate(180deg); }
+.faq-resposta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+.faq-item.aberto .faq-resposta { max-height: 200px; }
+.faq-resposta p {
+    padding: 0 20px 18px;
+    font-size: 14px;
+    color: #444;
+    margin: 0;
+}
+
+
+/* FOOTER — igual ao da home */
+/*style fo footer */
+footer {
+  background-color: #1a1a2e;
+  padding: 50px 40px;
+}
+
+.holder_footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ÍCONES REDES SOCIAIS */
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.icons img {
+  height: 35px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.icon img:hover {
+  opacity: 1;
+}
+
+/* EMAILS */
+.email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gmail a {
+  text-decoration: none;
+  color: #aaa;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.gmail a:hover {
+  color: #f5a623;
+}
+
+/* CONTACTOS */
+.contacos {
+  display: flex;
+  flex-direction: column;
+}
+
+.holdercontact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wordcontact span {
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.numero span {
+  color: #aaa;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+}
+
+/* LOGO */
+.logo_footer img {
+  height: 80px;
+  width: auto;
+  opacity: 0.9;
+}
+
+/* Monitor grande (4K / ultrawide) */
+@media (min-width: 1600px) {
+  #info-hero h1 {
+    font-size: 90px;
+  }
+
+  #info-hero p {
+    font-size: 24px;
+  }
+
+  .section-container h2 {
+    font-size: 56px;
+  }
+
+  .info-card {
+    min-width: 220px;
+    padding: 30px 44px;
+  }
+
+  .info-card strong {
+    font-size: 19px;
+  }
+
+  .info-card span {
+    font-size: 28px;
+  }
+
+  .step {
+    width: 200px;
+    padding: 30px 24px;
+  }
+
+  .step strong {
+    font-size: 17px;
+  }
+
+  .step span {
+    font-size: 14px;
+  }
+
+  .faq-lista {
+    max-width: 900px;
+  }
+
+  .faq-pergunta {
+    font-size: 18px;
+  }
+
+  .faq-resposta p {
+    font-size: 16px;
+  }
+
+  .logo_footer img {
+    height: 100px;
+  }
+
+  footer {
+    padding: 70px 60px;
+  }
+}
+
+/* Desktop padrão */
+@media (min-width: 1280px) and (max-width: 1599px) {
+  #info-hero h1 {
+    font-size: 72px;
+  }
+
+  .section-container h2 {
+    font-size: 46px;
+  }
+}
+
+/* Desktop pequeno */
+@media (max-width: 1280px) {
+  #info-hero h1 {
+    font-size: 56px;
+  }
+
+  .section-container h2 {
+    font-size: 38px;
+  }
+
+  .cards-row {
+    gap: 18px;
+  }
+
+  .mapa-holder {
+    gap: 28px;
+  }
+}
+
+/* Portátil (13"–15") */
+@media (max-width: 1024px) {
+  #info-hero {
+    height: 35vh;
+  }
+
+  #info-hero h1 {
+    font-size: 46px;
+  }
+
+  #info-hero p {
+    font-size: 16px;
+  }
+
+  .section-container h2 {
+    font-size: 34px;
+    margin-bottom: 28px;
+  }
+
+  .info-card {
+    padding: 20px 28px;
+    min-width: 150px;
+  }
+
+  .info-card span {
+    font-size: 20px;
+  }
+
+  .step {
+    width: 140px;
+    padding: 20px 16px;
+  }
+
+  .faq-lista {
+    max-width: 600px;
+  }
+
+  .mapa-holder {
+    gap: 20px;
+  }
+
+  header a {
+    margin-right: 30px;
+    font-size: 14px;
+  }
+}
+
+/* Tablet deitado */
+@media (max-width: 900px) {
+  #info-hero {
+    height: auto;
+    padding: 100px 30px 50px;
+  }
+
+  #info-hero h1 {
+    font-size: 38px;
+  }
+
+  #info-hero p {
+    font-size: 15px;
+  }
+
+  section {
+    padding: 50px 24px;
+  }
+
+  .section-container h2 {
+    font-size: 30px;
+  }
+
+  .cards-row {
+    gap: 16px;
+  }
+
+  .steps-row {
+    gap: 10px;
+  }
+
+  .step {
+    width: 130px;
+    padding: 18px 12px;
+  }
+
+  .step-seta {
+    font-size: 18px;
+  }
+
+  .mapa-holder {
+    flex-direction: column;
+  }
+
+  .mapa-embed iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+  .holder_footer {
+    gap: 28px;
+  }
+}
+
+/* Tablet em pé */
+@media (max-width: 768px) {
+  #info-hero h1 {
+    font-size: 32px;
+  }
+
+  #info-hero p {
+    font-size: 14px;
+  }
+
+  .section-container h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .steps-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step-seta {
+    transform: rotate(90deg);
+    display: inline-block;
+  }
+
+  .step {
+    width: 80%;
+    max-width: 320px;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    text-align: left;
+  }
+
+  .step-numero {
+    flex-shrink: 0;
+  }
+
+  .faq-pergunta {
+    font-size: 14px;
+    padding: 14px 16px;
+  }
+
+  .faq-resposta p {
+    font-size: 13px;
+  }
+
+  .form-contacto input,
+  .form-contacto textarea {
+    font-size: 13px;
+  }
+
+  .gmail a {
+    font-size: 15px;
+  }
+}
+
+/* Mobile grande */
+@media (max-width: 600px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 65px;
+        padding: 0;
+    }
+
+    .logo img {
+        width: 45px;
+        margin-left: 12px;
+    }
+
+    .logo span {
+        font-size: 11px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    header nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(248, 248, 249, 0.97);
+        padding: 20px 0;
+        gap: 0;
+        margin-right: 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    header nav.open {
+        display: flex;
+    }
+
+    header nav a {
+        padding: 14px 24px;
+        font-size: 14px;
+        border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+
+    header nav a:hover {
+        background-color: rgba(197, 227, 252, 0.5);
+        text-decoration: none;
+    }
+
+
+  footer {
+    padding: 40px 20px;
+  }
+
+  .logo_footer img {
+    height: 60px;
+  }
+
+  .gmail a {
+    font-size: 14px;
+  }
+
+  .numero span {
+    font-size: 13px;
+  }
+
+  #contacto {
+    padding: 40px 16px;
+  }
+  .holder_footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+}
+
+.icons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+.email {
+    justify-content: center;
+}
+
+.contacos {
+    align-items: center;
+}
+}
+
+/* Mobile pequeno */
+@media (max-width: 400px) {
+  #info-hero h1 {
+    font-size: 22px;
+  }
+
+  .section-container h2 {
+    font-size: 19px;
+  }
+
+  .info-card span {
+    font-size: 17px;
+  }
+
+  .info-card strong {
+    font-size: 14px;
+  }
+
+  .step strong {
+    font-size: 12px;
+  }
+
+  .step span {
+    font-size: 11px;
+  }
+
+  .faq-pergunta {
+    font-size: 12px;
+    padding: 12px 14px;
+  }
+
+  .logo img {
+    width: 70px;
+  }
+
+  header a {
+    font-size: 13px;
+  }
+
+  .form-contacto button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
